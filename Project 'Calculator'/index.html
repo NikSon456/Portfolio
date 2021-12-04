@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calc">
+        <div class="menu"><div class="screen" id="screen"></div></div>
+        <div class="main" id="figures">
+            <div class="main-btn" id="reset">&#8634;</div>
+            <div class="main-btn" id="back">&#8592;</div>
+            <div class="main-btn" id="0">0</div>
+            <div class="main-btn" id="1">1</div>
+            <div class="main-btn" id="2">2</div>
+            <div class="main-btn" id="3">3</div>
+            <div class="main-btn" id="4">4</div>
+            <div class="main-btn" id="5">5</div>
+            <div class="main-btn" id="6">6</div>
+            <div class="main-btn" id="7">7</div>
+            <div class="main-btn" id="8">8</div>
+            <div class="main-btn" id="9">9</div>
+        </div>
+        <div class="add" id="actions">
+            <div class="add-btn" id=".">.</div>
+            <div class="add-btn" id="+" onclick="op='+'">+</div>
+            <div class="add-btn" id="-" onclick="op='-'">-</div>
+            <div class="add-btn" id="*" onclick="op='*'">*</div>
+            <div class="add-btn" id="/" onclick="op='/'">/</div>
+            <div class="add-btn" id="=">=</div>
+        </div>
+    </div>
+    <script>
+document.getElementById("figures").addEventListener("click",
+    function screenWrite() {
+        if (event.srcElement.id == "reset") {
+            document.getElementById("screen").textContent = "";
+        } else if (event.srcElement.id == "back") {
+            let screen = document.getElementById("screen").textContent;
+            document.getElementById("screen").textContent = document.getElementById("screen").textContent.slice(
+                0, -1);
+        } else {
+            document.getElementById("screen").textContent += event.srcElement.id;
+        }
+    })
+    let operator;
+    let screen;
+document.getElementById("actions").addEventListener("click",
+    function screenWrite(){
+		if (event.srcElement.id == "."){
+            document.getElementById("screen").textContent += event.srcElement.id;
+        }else if(event.srcElement.id == "+"){
+            screen = document.getElementById("screen").textContent;
+            document.getElementById("screen").textContent = "";
+            operator = "+"
+        } else if (event.srcElement.id == "-"){
+            screen = document.getElementById("screen").textContent;
+            document.getElementById("screen").textContent = "";
+            operator = "-"
+        } else if (event.srcElement.id == "*"){
+            screen = document.getElementById("screen").textContent;
+            document.getElementById("screen").textContent = "";
+            operator = "*"
+        } else if (event.srcElement.id == "/"){
+            screen = document.getElementById("screen").textContent;
+            document.getElementById("screen").textContent = "";
+            operator = "/"
+        } else if(event.srcElement.id == "="){
+            if (operator == '+'){
+                    document.getElementById("screen").textContent = parseFloat(screen) + parseFloat(document.getElementById("screen").textContent)
+            } else if (operator == '-'){
+                    document.getElementById("screen").textContent = parseFloat(screen) - parseFloat(document.getElementById("screen").textContent)
+            } else if (operator == '*'){
+                    document.getElementById("screen").textContent = parseFloat(screen) * parseFloat(document.getElementById("screen").textContent)
+            } else if (operator == '/'){
+                    document.getElementById("screen").textContent = parseFloat(screen) / parseFloat(document.getElementById("screen").textContent)
+            }
+        else {
+            alert("error")
+        }
+    }});
+    </script>
+</body>
+</html>
