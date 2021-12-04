@@ -20,8 +20,3 @@ close.addEventListener("click", hideModal);
 function hideModal() {
     modal.classList.remove("show-modal");
 }
-
-function Hello() {
-    alert("привет");
-}
-Hello();
