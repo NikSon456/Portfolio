@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-block" id="main">
+        <div class="block" id="0" ></div>
+        <div class="block" id="1" ></div>
+        <div class="block" id="2" ></div>
+        <div class="block" id="3" ></div>
+        <div class="block" id="4" ></div>
+        <div class="block" id="5" ></div>
+        <div class="block" id="6" ></div>
+        <div class="block" id="7" ></div>
+        <div class="block" id="8" ></div>
+    </div>
+    <script>
+        var t = new Array(9)
+        let pole = document.getElementById("main");
+        let checker = 2;
+        let winner;
+        pole.addEventListener("click", function(){
+            if(checker == 1){
+                event.srcElement.classList.add('blue')
+                checker = 2
+                t[event.srcElement.id] = 'p1'
+            } else if(checker == 2){
+                event.srcElement.classList.add('red')
+                checker = 1
+                t[event.srcElement.id] = 'player'
+            }
+            checkEnd()
+        function checkEnd() {
+                if (t[0]=='player' && t[1]=='player' && t[2]=='player'){winner = true}else
+                if (t[3]=='player' && t[4]=='player' && t[5]=='player'){winner = true}else
+                if (t[6]=='player' && t[7]=='player' && t[8]=='player'){winner = true}else
+                if (t[0]=='player' && t[3]=='player' && t[6]=='player'){winner = true}else
+                if (t[1]=='player' && t[4]=='player' && t[7]=='player'){winner = true}else
+                if (t[2]=='player' && t[5]=='player' && t[8]=='player'){winner = true}else
+                if (t[0]=='player' && t[4]=='player' && t[8]=='player'){winner = true}else
+                if (t[2]=='player' && t[4]=='player' && t[6]=='player'){winner = true}else
+                if (t[0]=='p1' && t[1]=='p1' && t[2]=='p1'){winner = false}else
+                if (t[3]=='p1' && t[4]=='p1' && t[5]=='p1'){winner = false}else
+                if (t[6]=='p1' && t[7]=='p1' && t[8]=='p1'){winner = false}else
+                if (t[0]=='p1' && t[3]=='p1' && t[6]=='p1'){winner = false}else
+                if (t[1]=='p1' && t[4]=='p1' && t[7]=='p1'){winner = false}else
+                if (t[2]=='p1' && t[5]=='p1' && t[8]=='p1'){winner = false}else
+                if (t[0]=='p1' && t[4]=='p1' && t[8]=='p1'){winner = false}else
+                if (t[2]=='p1' && t[4]=='p1' && t[6]=='p1'){winner = false}else
+                if ((t[0]=='player' || t[0]=='p1') && (t[1]=='player' || t[1]=='p1') && (t[2]=='player' || t[2]=='p1') && (t[3]=='player' || t[3]=='p1') && (t[4]=='player' || t[4]=='p1') && (t[5]=='player' || t[5]=='p1') && (t[6]=='player' || t[6]=='p1') && (t[7]=='player' || t[7]=='p1') && (t[8]=='player' || t[8]=='p1')){winner = "no"}else
+                {winner}
+                whoWon()
+            function whoWon(){
+                if(winner == true){
+                    alert("Первый игрок победил")
+                    setTimeout(function(){
+	                location.reload();
+                    }, 2000);
+                }else if(winner == false){
+                    alert("Второй игрок победил")
+                    setTimeout(function(){
+	                location.reload();
+                    }, 2000);
+                }else if(winner == "no"){
+                    alert("Победила дружба")
+                    setTimeout(function(){
+	                location.reload();
+                    }, 2000);
+                }
+                
+            }
+        }
+
+
+
+        })
+    </script>
+</body>
+</html>
