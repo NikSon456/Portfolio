@@ -1,22 +1,14 @@
-const toggle = document.getElementById("toggle");
-const close = document.getElementById("close");
-const open = document.getElementById("open");
-const modal = document.getElementById("modal");
-
-// Toggle nav
-toggle.addEventListener("click", showNav);
-function showNav() {
-    document.body.classList.toggle("show-nav");
-}
-
-// Show modal
-open.addEventListener("click", showModal);
-function showModal() {
-    modal.classList.add("show-modal");
-}
-
-// Hide modal
-close.addEventListener("click", hideModal);
-function hideModal() {
-    modal.classList.remove("show-modal");
+let nav = document.querySelector('#nav');
+let logo = document.querySelector('#logo1');
+let toggle = document.querySelector('#toggle');
+toggle.onclick = function(){
+    if(nav.classList.contains('nav1') == true){
+    nav.classList.remove('nav1');
+    logo.classList.add('logo1')
+    logo.classList.remove('logo2');
+    } else {
+    nav.classList.add('nav1');
+    logo.classList.remove('logo1')
+    logo.classList.add('logo2');
+    }
 }

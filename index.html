@@ -1,120 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <title>My Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
 </head>
-
 <body>
-  <nav>
-    <div class="logo">
-      <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="user" />
+    <nav class="nav, nav1" id="nav">
+        <div class="logo"><img class="logo2" id="logo1" src="./img/photo_2021-12-24_16-52-03.jpg" alt="user" /></div>
+        <ul class="ul1">
+            <li class="li1"><a href="#Бургер" class="link1" target="_blank">Бургер</a></li>
+            <li class="li1"><a href="./Project 'Calculator'/index.html" class="link1" target="_blank">Калькулятор</a></li>
+            <li class="li1"><a href="./Project 'Slider'.true/Index.html" class="link1" target="_blank">Слайдер</a></li>
+            <li class="li1"><a href="./Project'Tic-Tac'/index.html" class="link1" target="_blank">Хрестики-Нолики</a></li>
+        </ul>
+    </nav>
+    <div class="main">
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="menu-btn">Меню</i>
+        </button>
+        <H1>Моя сторінка</H1>
+        <p class="Rtext">Святовець Нікіта</p>
+        <button class="cta-btn" id="open">Sign Up</button>
+    </header>
+    <section class="projects">
+        <h1 class="project-name">Проекти</h1>
+        <div class="projects-grid">
+            <div class="grid">
+                <h2 class="name">Бургер-меню</h2>
+                <img class="img" src="./img/Бургер.png" alt="Бургер-меню">
+            </div>
+            <div class="grid">
+                <h2 class="name">Калькулятор</h2>
+                <img class="img" src="./img/Калькулятор.png" alt="Калькулятор">
+            </div>
+            <div class="grid">
+                <h2 class="name">Слайдер</h2>
+                <img class="img" src="./img/Слайдер.png" alt="Слайдер">
+            </div>
+            <div class="grid">
+                <h2 class="name">Хрестики-Нолики</h2>
+                <img class="img" src="./img/Хрестики-нолики.png" alt="Хрестики-Нолики">
+            </div>
+        </div>
+    </section>
     </div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="https://nikson456.github.io/Portfolio/Project 'Calculator'/index.html">Calculator</a></li>
-      <li><a href="#">Contact Me</a></li>
-    </ul>
-  </nav>
-
-  <header>
-    <button id="toggle" class="toggle">
-      <i class="fa fa-bars fa-2x"></i>
-    </button>
-
-    <h1>My Page</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, amet!
-    </p>
-
-    <button class="cta-btn" id="open">Sign Up</button>
-  </header>
-
-  <div class="container">
-    <h2>What is this landing page about?</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iure
-      accusamus ab consectetur eos provident ipsa est perferendis architecto.
-      Provident, quaerat asperiores. Quo esse minus repellat sapiente, impedit
-      obcaecati necessitatibus.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente optio
-      officia ipsa. Cum dignissimos possimus et non provident facilis saepe!
-    </p>
-
-    <h2>Tell Me More</h2>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat eaque
-      delectus explicabo qui reprehenderit? Aspernatur ad similique minima
-      accusamus maiores accusantium libero autem iusto reiciendis ullam
-      impedit esse quibusdam, deleniti laudantium rerum beatae, deserunt nemo
-      neque, obcaecati exercitationem sit. Earum.
-    </p>
-
-    <h2>Benefits</h2>
-    <ul>
-      <li>Lifetime Access</li>
-      <li>30 Day Money Back</li>
-      <li>Tailored Customer Support</li>
-    </ul>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quam
-      nostrum, fugiat, itaque natus officia laborum dolorum id accusantium
-      culpa architecto tenetur fuga? Consequatur provident rerum eius ratione
-      dolor officiis doloremque minima optio dignissimos doloribus odio
-      debitis vero cumque itaque excepturi a neque, expedita nulla earum
-      accusamus repellat adipisci veritatis quam. Ipsum fugiat iusto pariatur
-      consectetur quas libero dolor dolores dolorem, nostrum ducimus
-      doloremque placeat accusamus iste, culpa quaerat consequatur?
-    </p>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal-container" id="modal">
-    <div class="modal">
-      <button class="close-btn" id="close">
-        <i class="fa fa-times"></i>
-      </button>
-      <div class="modal-header">
-        <h3>Sign Up</h3>
-      </div>
-      <div class="modal-content">
-        <p>Register with us to get offers, support and more</p>
-        <form class="modal-form">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter Name" class="form-input" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter Email" class="form-input" />
-          </div>
-          <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter Password" class="form-input" />
-          </div>
-          <div>
-            <label for="password2">Confirm Password</label>
-            <input type="password" id="password2" placeholder="Confirm Password" class="form-input" />
-          </div>
-          <input type="submit" value="Submit" class="submit-btn" />
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
